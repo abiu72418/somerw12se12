@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somerw12se12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>somerw12se12</h1>
+            <p class="subtitle">Shares Outstanding Data from SEC EDGAR</p>
+        </header>
+
+        <main id="data-container">
+            <div class="loader" id="loader"></div>
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            
+            <div id="content" style="display: none;">
+                <h2 id="share-entity-name"></h2>
+                <div class="card-grid">
+                    <div class="card card-max">
+                        <h3>Highest Shares Outstanding (Post-2020)</h3>
+                        <p class="value" id="share-max-value"></p>
+                        <p class="year">Fiscal Year: <span id="share-max-fy"></span></p>
+                    </div>
+                    <div class="card card-min">
+                        <h3>Lowest Shares Outstanding (Post-2020)</h3>
+                        <p class="value" id="share-min-value"></p>
+                        <p class="year">Fiscal Year: <span id="share-min-fy"></span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Project: somerw12se12</p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
