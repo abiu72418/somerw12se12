@@ -1,0 +1,142 @@
+:root {
+    --background-color: #f4f7f9;
+    --text-color: #333;
+    --primary-color: #005eb8; /* AEP-like blue */
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --max-color: #28a745;
+    --min-color: #dc3545;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+#share-entity-name {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.card .value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.card-max .value {
+    color: var(--max-color);
+}
+
+.card-min .value {
+    color: var(--min-color);
+}
+
+.card .year {
+    font-size: 1rem;
+    color: #777;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 40px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: var(--min-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--min-color);
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #share-entity-name {
+        font-size: 1.5rem;
+    }
+    .card .value {
+        font-size: 2rem;
+    }
+}
